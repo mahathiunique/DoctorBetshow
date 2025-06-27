@@ -1,7 +1,7 @@
 /*App.css*/
 
 body{
-  background: url("../public/background.jpg");
+  background: url("../public/bg.jpg");
   background-size: cover;
   background-repeat: repeat;
 }

@@ -1,4 +1,3 @@
-//App.js
 import { useState } from 'react';
 import { Container, Row, Col, Form } from 'react-bootstrap';
 import './App.css';
@@ -64,7 +63,7 @@ function App() {
       </Row>
       <Row className='my-4'>
         <Col>
-          <h2 className='text-dark'>{edittask ? "Edit Task" : "Add New Task"}</h2>
+          <h2 className='text-dark'>{edittask ? "Edit Task" : "Doctor's To-Do List"}</h2>
           <AddTask addTask={addTask} editTask={editTask} editingTask={edittask} clearEditing={clearEditing}/>
         </Col>
       </Row>
