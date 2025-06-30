@@ -1,0 +1,31 @@
+/*App.css*/
+
+body{
+  background: url("../public/bg.jpg");
+  background-size: cover;
+  background-repeat: repeat;
+}
+.App {
+  text-align: center;
+}
+
+.completed {
+  background-color: #b2b2b2;
+}
+
+.todo-list-item {
+  transition: background-color 0.3s;
+}
+
+.todo-list-item:hover {
+  background-color: #f5f5f5;
+}
+
+.rbc-header {
+  background-color: #333;
+  color: #fff;
+}
+
+.rbc-header .rbc-header-content {
+  padding: 10px;
+}
