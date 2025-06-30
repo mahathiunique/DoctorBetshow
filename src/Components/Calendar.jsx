@@ -16,13 +16,13 @@ function CalendarComponent({todolist}){
     const eventStyleGetter = (event) => {
         let backgroundColor = '#3174ad';
         switch (event.priority) {
-        case 'High':
+        case 'incompleted':
             backgroundColor = 'red';
             break;
-        case 'Medium':
+        case 'consulting':
             backgroundColor = 'orange';
             break;
-        case 'Low':
+        case 'completed':
             backgroundColor = 'green';
             break;
         default:

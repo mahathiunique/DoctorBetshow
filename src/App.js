@@ -32,6 +32,7 @@ function App() {
       description: input.description,
       priority: input.priority,
       dueDate: input.dueDate,
+      time: input.time, 
       completed: false,
     };
     setTodolist([...todolist, newTask]);
@@ -57,19 +58,26 @@ function App() {
   return (
     <Container fluid="md">
       <Row>
+      <div className="doctor-header">
+      <img src="https://via.placeholder.com/60" />
+  <div>
+    <h1>Dr. Sarah Johnson</h1>
+    <p>Cardiology • Central Hospital</p>
+  </div>
+</div>
         <Col>
           <Header />
         </Col>
       </Row>
       <Row className='my-4'>
         <Col>
-          <h2 className='text-dark'>{edittask ? "Edit Task" : "Doctor's To-Do List"}</h2>
+          <h1 className='text-dark'>{edittask ? "Edit Task" : "Doctor's To-Do List"}</h1>
           <AddTask addTask={addTask} editTask={editTask} editingTask={edittask} clearEditing={clearEditing}/>
         </Col>
       </Row>
       <Row>
         <Col md={4}>
-          <h2 className='text-dark'>Tasks</h2>
+          <h1 className='text-dark'>Tasks</h1>
           <Todolist todo={getFilteredTasks()} handleToggle={handleToggle} deleteTask={deleteTask} setEdittask={setEdittask}/>
         </Col>
         <Col md={2}>
@@ -77,13 +85,11 @@ function App() {
             <option value="all">All</option>
             <option value="completed">Completed</option>
             <option value="incomplete">Incomplete</option>
-            <option value="High">High</option>
-            <option value="Medium">Medium</option>
-            <option value="Low">Low</option>
+            <option value="consulting">Consulting</option>
           </Form.Select>
         </Col>
         <Col md={6}>
-          <h2 className='text-dark'>Calendar</h2>
+          <h1 className='text-dark'>Calendar</h1>
           <CalendarComponent todolist={getFilteredTasks()}/>
         </Col>
       </Row>
